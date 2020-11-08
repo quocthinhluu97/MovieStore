@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model HomeViewModel
+
+<div class="text-center">
+    <partial name="_Carousel" />
+
+    <div class="row">
+        @foreach(var movie in Model.MoviesOfTheWeek)
+        {
+            <partial name="_MovieCard" model="movie" />
+        }
+    </div>
+</div>

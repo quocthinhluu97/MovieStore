@@ -1,0 +1,8 @@
+﻿@model MovieListViewModel
+
+<div class="row">
+    @foreach (var movie in Model.Movies)
+    {
+        <partial name="_MovieCard" model="movie" />
+    }
+</div>

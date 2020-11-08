@@ -1,0 +1,23 @@
+﻿@model Movie
+
+<div class="col-md-4">
+    <div class="border bg-light rounded p-1">
+        <img src="@Model.ImageThumbnailUrl" class="img-fluid" />
+        <div class="figure-caption">
+            <h3><a asp-controller="Movie" asp-action="Detail" asp-route-id="@Model.MovieId">Name: @Model.Name</a></h3>
+            <h3 class="pull-right">Price: @Model.Price.ToString("c")</h3>
+            <h3>Rating: @Model.Rating</h3>
+            <h3>Description: @Model.Description</h3>
+        </div>
+        <div class="addToCart">
+            <p class="button">
+                <a class="btn btn-primary"
+                   asp-controller="ShoppingCart"
+                   asp-action="AddToShoppingCart"
+                   asp-route-movieId="@Model.MovieId">
+                    Add to cart
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
