@@ -27,27 +27,9 @@ namespace MovieStore.Models
         [Required(ErrorMessage = "Please enter your address")]
         [Display(Name = "Address Line 1")]
         [StringLength(100)]
-        public string AddressLine1 { get; set; }
+        public string AddressLine { get; set; }
 
-        [Display(Name = "Address Line 2")]
-        [StringLength(100)]
-        public string AddressLine2 { get; set; }
-
-        [Required(ErrorMessage = "Please enter your zip code")]
-        [Display(Name = "Zip code")]
-        [StringLength(10, MinimumLength = 4)]
-        public string ZipCode { get; set; }
-
-        [Required(ErrorMessage = "Please enter your city")]
-        [StringLength(50)]
-        public string City { get; set; }
-
-        [StringLength(50)]
-        public string State { get; set; }
-
-        [StringLength(50)]
-        public string Country { get; set; }
-
+      
         [Required(ErrorMessage = "Please enter your phone")]
         [StringLength(25)]
         [DataType(DataType.PhoneNumber)]
