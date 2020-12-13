@@ -50,8 +50,9 @@ namespace MovieStore
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+            app.UseNodeModules();
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseSession();

@@ -19,6 +19,8 @@ namespace MovieStore.Controllers
             _categoryRepository = categoryRepository;
         }
 
+
+        [HttpGet("movies/all")]
         public IActionResult List(string category)
         {
             IEnumerable<Movie> movies;
@@ -53,5 +55,6 @@ namespace MovieStore.Controllers
 
             return View(movie);
         }
+
     }
 }
